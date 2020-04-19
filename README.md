@@ -11,7 +11,7 @@ The exam includes 3 tasks to be done: [Calculator](/tasks/Calculator.md), [Pyram
 
 ### Result ###
 
-* Author name : Jean Ponomarev (Пономарев Жан)
+* Author name : Пономарев Жан
 * Codeship : [![Codeship Status for JeanPonomarev/javaschooltasks](https://app.codeship.com/projects/d7ee3ad0-6477-0138-5a7a-6ea648e38dcf/status?branch=master)](https://app.codeship.com/projects/393335)
 
 
