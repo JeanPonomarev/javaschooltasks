@@ -1,6 +1,7 @@
 package com.tsystems.javaschool.tasks.subsequence;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Subsequence {
 
@@ -14,7 +15,38 @@ public class Subsequence {
      */
     @SuppressWarnings("rawtypes")
     public boolean find(List x, List y) {
-        // TODO: Implement the logic here
+        if (x == null || y == null) {
+            throw new IllegalArgumentException("Null list has been found");
+        }
+
+        int k = 0;
+
+        outerLoop:
+        for (int i = 0; i < x.size(); i++) {
+            for (int j = k; j < y.size(); j++) {
+                if (containsFromIndex(i, y.get(j), x)) {
+                    if (Objects.equals(x.get(i), y.get(j))) {
+                        k = j + 1;
+                        continue outerLoop;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean containsFromIndex(int startIndex, Object yElement, List x) {
+        for (int i = startIndex; i < x.size(); i++) {
+            if (Objects.equals(yElement, x.get(i))) {
+                return true;
+            }
+        }
+
         return false;
     }
 }
