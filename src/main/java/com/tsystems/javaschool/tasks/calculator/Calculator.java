@@ -32,7 +32,7 @@ public class Calculator {
         return getCorrectedFinalResult(finalResult);
     }
 
-    private static String getCorrectedFinalResult(double result) {
+    private String getCorrectedFinalResult(double result) {
         if (result % 1 == 0) {
             return String.valueOf((int) result);
         }
@@ -44,7 +44,7 @@ public class Calculator {
         return String.valueOf(result);
     }
 
-    private static double calculateSimpleExpression(List<String> elements) throws ArithmeticException {
+    private double calculateSimpleExpression(List<String> elements) throws ArithmeticException {
         double transitionResult;
 
         for (int i = 0; i < elements.size(); ) {
@@ -72,7 +72,7 @@ public class Calculator {
         return finalResult;
     }
 
-    private static List<String> getElementsSequence(String expression) throws IllegalArgumentException, ArithmeticException {
+    private List<String> getElementsSequence(String expression) throws IllegalArgumentException, ArithmeticException {
         System.out.println("Expression: " + expression);
 
         List<String> elements = new ArrayList<>();

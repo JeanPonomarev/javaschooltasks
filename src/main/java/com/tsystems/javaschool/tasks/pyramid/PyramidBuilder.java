@@ -38,7 +38,7 @@ public class PyramidBuilder {
         return pyramid;
     }
 
-    private static <T> void verifyPyramidBuildingPossibility(List<T> list) {
+    private <T> void verifyPyramidBuildingPossibility(List<T> list) {
         if (list.contains(null)) {
             throw new CannotBuildPyramidException();
         }
@@ -50,7 +50,7 @@ public class PyramidBuilder {
         }
     }
 
-    private static int[][] createEmptyMatrix(int elementsCount) {
+    private int[][] createEmptyMatrix(int elementsCount) {
         int columnsCount = (int) ((-1 + Math.sqrt(1 + 8 * elementsCount)) / 2.0);
         int rowsCount = 2 * columnsCount - 1;
 
