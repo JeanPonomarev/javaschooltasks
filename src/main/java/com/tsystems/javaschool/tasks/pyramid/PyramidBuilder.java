@@ -29,7 +29,7 @@ public class PyramidBuilder {
                 pyramid[i][k] = iterator.previous();
 
                 j--;
-                k = k - 2;
+                k -= 2;
             }
         }
 
