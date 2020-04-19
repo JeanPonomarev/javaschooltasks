@@ -16,9 +16,7 @@ public class PyramidBuilder {
      */
     public int[][] buildPyramid(List<Integer> inputNumbers) {
         verifyPyramidBuildingPossibility(inputNumbers);
-
         Collections.sort(inputNumbers);
-
         ListIterator<Integer> iterator = inputNumbers.listIterator(inputNumbers.size());
 
         int[][] pyramid = createEmptyMatrix(inputNumbers.size());

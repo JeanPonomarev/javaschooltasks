@@ -73,8 +73,6 @@ public class Calculator {
     }
 
     private List<String> getElementsSequence(String expression) throws IllegalArgumentException, ArithmeticException {
-        System.out.println("Expression: " + expression);
-
         List<String> elements = new ArrayList<>();
 
         int selectedCharsLength = 0;

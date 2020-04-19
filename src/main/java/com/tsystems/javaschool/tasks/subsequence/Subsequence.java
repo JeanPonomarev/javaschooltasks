@@ -40,6 +40,7 @@ public class Subsequence {
         return true;
     }
 
+    @SuppressWarnings("rawtypes")
     private boolean containsFromIndex(int startIndex, Object yElement, List x) {
         for (int i = startIndex; i < x.size(); i++) {
             if (Objects.equals(yElement, x.get(i))) {
